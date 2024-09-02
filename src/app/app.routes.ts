@@ -6,11 +6,9 @@ import {OrderComponent} from './order/order.component';
 
 export const routes: Routes = [
   {
-      path:'',redirectTo:'home',pathMatch:'full'
+      path:'', component: HomeComponent
   },
-  {
-    path:'home',component: HomeComponent,
-  },
+
   {
       path:'register',component:RegisterComponent,
   },
