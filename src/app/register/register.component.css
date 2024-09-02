@@ -80,10 +80,7 @@ label span {
   margin-top: 40px;
   letter-spacing: 4px
 }
-
-/* <uniquifier>: Use a unique and descriptive class name
- <weight>: Use a value from 400 to 700
-  */
+ 
 .is-title{
     font-family: "Play", sans-serif,"Edu VIC WA NT Beginner", cursive;
     font-optical-sizing: auto;
@@ -120,4 +117,3 @@ label span {
     border: 1px solid #001489;
 
 }
- 
