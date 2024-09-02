@@ -1,0 +1,103 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+ 
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <div class="container">
+        <div class=" card mb-5">
+           <div class="card-body">
+                <h1 class="card-title">Order form</h1>
+                <form class="row g-3" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Dd2000001MlR9" method="POST">
+        
+                    <input type=hidden name="orgid" value="00Dd2000001MlR9">
+                    <input type=hidden name="retURL" value="https://www.google.com/">
+                    
+                    <!--  ----------------------------------------------------------------------  -->
+                    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                    <!--  these lines if you wish to test in debug mode.                          -->
+                    <!--  <input type="hidden" name="debug" value=1>                              -->
+                    <!--  <input type="hidden" name="debugEmail"                                  -->
+                    <!--  value="ahmedsidatendir97@gmail.com">                                    -->
+                    <!--  ----------------------------------------------------------------------  -->
+                    <!-- contact name field  -->
+                    <div class="mb-3 col-md-6"> 
+                        <label for="name" class="form-label">Contact Name</label>
+                        <input class="form-control"  id="name" maxlength="80" name="name" size="20" type="text" />
+                    </div>
+                    
+                    <!-- email field -->
+                    <div class="mb-3 col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input t class="form-control"   id="email" maxlength="80" name="email" size="20" type="text" />
+                    </div>
+                    
+                    <!--phone field -->
+                    <div class="mb-3 col-md-6">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input  id="phone" class="form-control" maxlength="40" name="phone" size="20" type="text" />
+                    </div>
+                    
+                    <!-- subject field -->
+                    <div class="mb-3 col-md-6">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input  class="form-control"   id="subject" maxlength="80" name="subject" size="20" type="text" />
+                    </div>
+                    
+                    <!-- description field -->
+                    <div class="mb-3 col-md-6">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="description" class="form-control"  placeholder="Description"></textarea>
+                    </div>
+                    
+                    <!-- company field -->
+                    <div class="mb-3 col-md-6">
+                        <label for="company" class="form-label">Company</label>
+                        <input  class="form-control"   id="company" maxlength="80" name="company" size="20" type="text" />
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="status"  class="label-select">Status</label>
+                            <select  id="status"  class="form-select" name="status"   >
+                                <option value="">--None--</option>
+                                <option value="New">New</option>
+                                <option value="Working">Working</option>
+                                <option value="Escalated">Escalated</option>
+                                <option value="Closed">Closed</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="00Nd2000000Z2ru" class="form-label">Product</label>
+                            <select  class="form-select"  id="00Nd2000000Z2ru" name="00Nd2000000Z2ru" title="Product">
+                                <option value="">--None--</option>
+                                <option value="GC1040">GC1040</option>
+                                <option value="GC1060">GC1060</option>
+                                <option value="GC3020">GC3020</option>
+                                <option value="GC3040">GC3040</option>
+                                <option value="GC3060">GC3060</option>
+                                <option value="GC5020">GC5020</option>
+                                <option value="GC5040">GC5040</option>
+                                <option value="GC5060">GC5060</option>
+                                <option value="GC1020">GC1020</option>
+                            </select>
+                                
+                        </div>
+                      
+                    </div>
+                    <div class="col-md-6  offset-md-3 is-center">
+                        <button type="submit" name="submit" class="btn btn-success">
+                           Send <i class="bi bi-send"></i>
+                       </button>
+                   </div>
+                </form>   
+           </div>
+        </div>     
+    </div>

@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.card{
+    min-width: 360px;
+    background-color: #fff;
+    margin-top: 3em;
+}
+.is-center{
+    align-items:center;
+    display:flex;
+    justify-content:center;
+}
+.card-title{
+    text-align:center;
+}

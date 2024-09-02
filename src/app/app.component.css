@@ -1,0 +1,13 @@
+nav{
+  margin: 10px 0 0 4.7em;
+}
+a{
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+  text-decoration: underline;
+  border-bottom: rgb(0, 20, 137);
+  color: rgb(0, 20, 137);
+}

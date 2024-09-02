@@ -1,6 +1,7 @@
+
 .container {
   border: 1px solid #d8dde6;
-  margin: 10px 0 20px;
+  margin: 7rem 0 20px;
 }
 
 .header-column {
@@ -20,13 +21,10 @@
   margin-bottom: .25rem;
 }
 .image{
-  height:500px;
+  height:400px;
   width:auto;
 }
-.btn-send {
-  background-color: #f3f3f3;
-  color: rgb(0, 20, 137);
-  text-transform: capitalize;
+.button{
   font-size: 1rem;
   border-radius: 5px;
   text-decoration:none;
@@ -36,19 +34,41 @@
   text-align:center;
   box-sizing: border-box;
   transition: 1s all ease-in-out 20ms;
+  -o-transition: 1s all ease-in-out 20ms;
   -webkit-transition: 1s all ease-in-out 20ms;
   -moz-transition: 1s all ease-in-out 20ms;
   -ms-transition: 1s all ease-in-out 20ms;
-  -o-transition: 1s all ease-in-out 20ms;
   appearance:  1s all ease-in-out 20ms;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  text-transform: capitalize; 
+  align-items: center;
+  text-align: center;
+}
+.btn-send {
+  background-color: #f3f3f3;
+  color: rgb(0, 20, 137);
 }
 .btn-send:hover{
   background-color: #001489;
-  color: #fff;
+  color: #fff; 
   border: 1px solid #001489; 
 }
+
+.btn-order{
+  background-color: rgb(0, 20, 137);
+  color: #fff; 
+}
+.btn-order:hover{
+  opacity: 0.5; 
+}
+
 
 .custom-padding {
   padding: 0.5rem; /* Adjust the value as needed */
 }
+

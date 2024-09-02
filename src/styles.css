@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+/**
+  Import font awesome for all icons   
+*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css');
+/**
+  Import google fonts links
+ */
+@import url('https://fonts.googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.gstatic.com');
+.hub{
+  background-color: #f9efe9;
+}
