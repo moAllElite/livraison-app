@@ -9,5 +9,5 @@ import {FormGroup, ReactiveFormsModule,  FormsModule,  FormControl, Validators} 
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-
+   
 }

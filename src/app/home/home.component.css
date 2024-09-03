@@ -33,6 +33,14 @@
   height:400px;
   width:auto;
 }
+.image:hover{
+  opacity:0.86;
+  transition: 500ms opacity ease-out 200ms;
+  -webkit-transition: 500ms opacity ease-out 200ms;
+  -moz-transition: 500ms opacity ease-out 200ms;
+  -ms-transition: 500ms opacity ease-out 200ms;
+  -o-transition: 500ms opacity ease-out 200ms;
+}
 .button{
   font-size: 1rem;
   border-radius: 5px;
@@ -80,4 +88,3 @@
 .custom-padding {
   padding: 0.5rem; /* Adjust the value as needed */
 }
- 

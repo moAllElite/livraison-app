@@ -1,7 +1,7 @@
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
 <!--  If necessary, please modify the charset parameter to specify the        -->
-  
+
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
    <!--  ----------------------------------------------------------------------  -->
   <!--  NOTE: Please add the following <FORM> element to your page.             -->
@@ -9,76 +9,85 @@
       <title>Lead's Form</title>
       <div class="login-box ">
            <!--form-->
-           <form   
+           <form
             action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dd2000001MlR9" method="POST">
 
               <input  type=hidden name="oid" value="00Dd2000001MlR9">
-              <input  type=hidden name="retURL" value="https://agilicis2-dev-ed.develop.lightning.force.com/lightning/page/home">   
+              <input  type=hidden name="retURL" value="https://livraison-app-plum.vercel.app/success">
           <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
           <!--  these lines if you wish to test in debug mode.                          -->
           <!--  <input [formControl]="last_name" type="hidden" name="debug" value=1>                              -->
           <!--  <input [formControl]="last_name" type="hidden" name="debugEmail"                                  -->
-          <!--  value="ahmedsidatendir97@gmail.com">                                    -->
+          <!--  value=" ">                                    -->
           <!--  ----------------------------------------------------------------------  -->
 
               <!--title-->
-              <h2 class="is-title mt-5"> 
+              <h2 class="is-title mt-5">
                    global a transport<br/> logistic   <i class=" pt-4 fa-solid fa-truck-fast fa-2xl mt-1"></i>
                </h2>
-              
+
               <!--title-->
               <div class="user-box">
-                  <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required /> 
-                  <label for="first_name" > <i class="fa-solid fa-person"></i> First Name <span>*</span></label>  
-                  </div>
+                  <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required />
+                  <label for="first_name" > <i class="fa-solid fa-person"></i> First Name <span>*</span></label>
+              </div>
+
+              <!--lastname-->
               <div class="user-box">
-                  <input    id="last_name" maxlength="80" name="last_name" size="20" type="text" required/>  
+                  <input    id="last_name" maxlength="80" name="last_name" size="20" type="text" required/>
                   <label for="last_name" ><i class="fa-solid fa-user"></i> Last Name  <span>*</span></label>
                   <span class="error-message"></span>
               </div>
+
+              <!--email-->
               <div class="user-box">
-                  <input    id="email" maxlength="80" name="email" size="20" type="text" required/> 
+                  <input    id="email" maxlength="80" name="email" size="20" type="text" required/>
                   <label for="email" > <i class="fa-solid fa-envelope"></i>  Email    <span>*</span></label>
                   <span class="error-message"></span>
               </div>
-          
+
+
+              <!--company-->
               <div class="user-box">
-                  <input    id="company" maxlength="40" name="company" size="20" type="text" required/> 
+                  <input    id="company" maxlength="40" name="company" size="20" type="text" required/>
                   <label for="company" > <i class="fa-solid fa-building"></i> Company <span>*</span></label>
                   <span class="error-message"></span>
               </div>
-              
+
+              <!--city-->
               <div class="user-box">
-                  <input   id="city" maxlength="40" name="city" size="20" type="text" required/>   
+                  <input   id="city" maxlength="40" name="city" size="20" type="text" required/>
                   <label for="city" ><i class="fa-solid fa-thumbtack"></i> City   <span>*</span></label>
                   <span class="error-message"></span>
               </div>
-              
+
+              <!-- state / province-->
               <div class="user-box">
-                  <input    id="state" maxlength="20" name="state" size="20" type="text" required/> 
+                  <input    id="state" maxlength="20" name="state" size="20" type="text" required/>
                   <label for="state" > <i class="fa-solid fa-location-dot"></i> State/Province    <span>*</span></label>
                   <span class="error-message"></span>
               </div>
-              
+
+              <!-- phone -->
               <div class="user-box">
-                
-                  <input   id="phone" maxlength="40" name="phone" size="20" type="text" required />
-                  <label for="phone" > <i class="fa-solid fa-phone"></i> Phone    <span>*</span></label>   
+
+                  <input oninput=""   id="phone" maxlength="40" name="phone" size="20" type="text" required />
+                  <label for="phone" > <i class="fa-solid fa-phone"></i> Phone    <span>*</span></label>
                   <span class="error-message " id="error-message" > </span>
               </div>
-              
+
               <!-- NINEA -->
-              <div class="user-box"> 
+              <div class="user-box">
                   <input   id="00Nd20000011DST" maxlength="255" name="00Nd20000011DST" size="20" type="text" required/>
-                  <label for="00Nd20000011DST"  > <i class="fa-solid fa-certificate"></i> NINEA  <span>*</span></label>   
+                  <label for="00Nd20000011DST"  > <i class="fa-solid fa-certificate"></i> NINEA  <span>*</span></label>
                   <span class="error-message " id="error-message" > </span>
               </div>
 
                <!-- RAISON SOCIAL -->
               <div class="user-box">
-                   
+
                   <input    id="00Nd20000011Dib" maxlength="255" name="00Nd20000011Dib" size="20" type="text" required/>
-                  <label for="00Nd20000011Dib" > <i class="fa-solid fa-place-of-worship"></i> Business Name  <span>*</span></label>   
+                  <label for="00Nd20000011Dib" > <i class="fa-solid fa-place-of-worship"></i> Business Name  <span>*</span></label>
                   <span class="error-message " id="error-message" > </span>
               </div>
 
@@ -90,12 +99,38 @@
           </form>
           <!--form-->
         </div>
-       
-    
-  <!-- scripts js & cdn fontawesome -->
- 
- 
-  <!-- scripts js & cdn fontawesome -->
-  <script src="./js/script.js"></script>
 
+
+  <!-- scripts js & cdn fontawesome -->
+
+
+  <!-- scripts js & cdn fontawesome -->
+
+<script>
+  phoneNumberField.addEventListener("input", function (event) {
+    let input = event.target.value.replace(/\D/g, ""); // Remove all non-digit characters
+
+    // Ensure the input is not longer than 9 digits (for local format)
+    if (input.length > 9) {
+      input = input.substring(0, 9);
+    }
+
+    let formattedPhone = "";
+
+    if (input.length > 0) {
+      formattedPhone = input.substring(0, 2); // Prefix (e.g., 77, 78, 70, etc.)
+    }
+    if (input.length >= 3) {
+      formattedPhone += " " + input.substring(2, 5); // Next group of digits
+    }
+    if (input.length >= 5) {
+      formattedPhone += " " + input.substring(5, 7); // Next group of digits
+    }
+    if (input.length >= 7) {
+      formattedPhone += " " + input.substring(7, 9); // Last group of digits
+    }
+
+    event.target.value = formattedPhone;
+  });
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/fontawesome.min.jss"></script>
