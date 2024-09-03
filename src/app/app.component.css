@@ -6,8 +6,9 @@ a{
   text-decoration: none;
   color: #000;
 }
-a:hover{
-  text-decoration: underline;
+a:hover,.is-active{
+  text-decoration-line: underline;
+  text-decoration-thickness: 3.5px;
   border-bottom: rgb(0, 20, 137);
   color: rgb(0, 20, 137);
 }
