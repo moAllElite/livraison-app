@@ -4,8 +4,8 @@
 */
 
 .login-box {
-  position: absolute;
-  margin-top: 10%;
+  position: fixed;
+  margin-top: 12%;
   top: 70%;
   left: 50%;
   width: 400px;
@@ -59,6 +59,7 @@
 }
 label span {
   color: red;
+  margin-bottom: -5em;
 }
 .error-message{
   color:#922b21 ;

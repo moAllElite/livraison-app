@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal, WritableSignal } from '@angular/core';
 import {AsyncPipe, NgIf} from "@angular/common";
 import {FormGroup, ReactiveFormsModule,  FormsModule,  FormControl, Validators} from "@angular/forms";
 import { RouterLink } from '@angular/router';
@@ -15,7 +15,10 @@ import { RouterLink } from '@angular/router';
 })
 export class RegisterComponent implements OnInit{
 
-  protected formGroup !:FormGroup ;
+  public formGroup !:FormGroup ;
+  public disableBtn:WritableSignal<Boolean>  = signal(false);
+  
+  // on Initialize we create a new formaular to register new leads
  ngOnInit(): void {
    this.formGroup =  new FormGroup({
     first_name: new FormControl('' , [Validators.required  ]),
@@ -29,6 +32,13 @@ export class RegisterComponent implements OnInit{
     ninea:new FormControl('',[Validators.required])
  });
 
+ this.formGroup.valueChanges
+             .subscribe((changedObj: any) => {
+              if(this.formGroup.valid)
+                 this.disableBtn.set(false);
+              else
+                this.disableBtn.set(true);
+             });
  }
 
   /**
@@ -67,4 +77,13 @@ export class RegisterComponent implements OnInit{
   get ninea(){return this.formGroup.get('ninea');}
 
   get raison_social(){return this.formGroup.get('raison_social');}
+
+
+  buttonStatus(){
+    if(this.formGroup.valid){
+      return 'btn-send';
+    }else{
+      return 'btn btn-outline-secondary';
+    }
+  }
 }
