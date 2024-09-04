@@ -11,6 +11,6 @@ export class NavbarComponent {
   items = [
     { name:'Home',link:'home'},
     {name:'Register',link:'register'},
-    {name:'Pre-order',link:'pre-order'}
+    {name:'order',link:'pre-order'}
   ];
 }

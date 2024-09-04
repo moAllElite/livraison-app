@@ -134,7 +134,7 @@
               </div>
 
               <!-- submit button -->
-              <button type="submit" name="submit" class="btn-send ">
+              <button type="submit" [disabled]="formGroup.invalid" [class]="formGroup.invalid? 'btn btn-outline-second' :'btn-send'"  name="submit">
                   <i class="fa-solid fa-circle-check  fa-lg  "></i>
                   send
               </button>

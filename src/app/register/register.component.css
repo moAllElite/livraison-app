@@ -5,6 +5,7 @@
 
 .login-box {
   position: absolute;
+  margin-top: 10%;
   top: 70%;
   left: 50%;
   width: 400px;
@@ -95,6 +96,7 @@ label span {
     text-transform: uppercase;
     color: #001489;
 }
+
 
 
   .btn-send,button{
