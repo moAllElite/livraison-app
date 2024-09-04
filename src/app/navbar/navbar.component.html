@@ -1,0 +1,12 @@
+<!-- navbar -->
+<nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    @for (item of items; track $index) {
+      <li class="breadcrumb-item "  routerLinkActive="is-active" >
+        <a [routerLink]="item.link ">
+          {{item.name}}
+        </a>
+      </li>
+    }
+  </ol>
+</nav>

@@ -1,0 +1,23 @@
+nav{
+  margin: 10px 0 0 4.7em;
+}
+a{
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+
+
+a:hover,.is-active,li:active,a::selection{
+  text-decoration-line: underline;
+  text-decoration-thickness: 3.5px;
+  border-bottom: rgb(0, 20, 137);
+  color: rgb(0, 20, 137);
+  opacity: 0,8;
+  transition:2ms all cubic-bezier(0.39, 0.575, 0.565, 1) 20ms;
+  -webkit-transition:2ms all cubic-bezier(0.39, 0.575, 0.565, 1) 20ms;
+  -moz-transition:2ms all cubic-bezier(0.39, 0.575, 0.565, 1) 20ms;
+  -ms-transition:2ms all cubic-bezier(0.39, 0.575, 0.565, 1) 20ms;
+  -o-transition:2ms all cubic-bezier(0.39, 0.575, 0.565, 1) 20ms;
+}
+
