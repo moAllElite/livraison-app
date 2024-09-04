@@ -59,6 +59,10 @@
 label span {
   color: red;
 }
+.error-message{
+  color:#922b21 ;
+  font-weight: 600;
+}
 .login-box .user-box input:focus ~ label,
 .login-box .user-box input:valid ~ label {
   top: -20px;
@@ -80,7 +84,7 @@ label span {
   margin-top: 40px;
   letter-spacing: 4px
 }
- 
+
 .is-title{
     font-family: "Play", sans-serif,"Edu VIC WA NT Beginner", cursive;
     font-optical-sizing: auto;

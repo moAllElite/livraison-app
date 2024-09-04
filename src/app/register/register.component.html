@@ -9,7 +9,7 @@
       <title>Lead's Form</title>
       <div class="login-box ">
            <!--form-->
-           <form
+           <form [formGroup]="formGroup"
             action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dd2000001MlR9" method="POST">
 
               <input  type=hidden name="oid" value="00Dd2000001MlR9">
@@ -28,67 +28,109 @@
 
               <!--title-->
               <div class="user-box">
-                  <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required />
+                  <input formControlName="first_name" id="first_name" maxlength="40" name="first_name" size="20" type="text" required />
                   <label for="first_name" > <i class="fa-solid fa-person"></i> First Name <span>*</span></label>
+                  <!-- show error message while input lose focus and is empty -->
+                  <div *ngIf="first_name?.invalid && (first_name?.dirty || first_name?.touched)" >
+                    <div *ngIf="first_name?.hasError('required')">
+                      <span class="error-message">Firstname is required</span>
+                    </div>
+                  </div>
               </div>
 
               <!--lastname-->
               <div class="user-box">
-                  <input    id="last_name" maxlength="80" name="last_name" size="20" type="text" required/>
+                  <input  formControlName="last_name"  id="last_name" maxlength="80" name="last_name" size="20" type="text" required/>
                   <label for="last_name" ><i class="fa-solid fa-user"></i> Last Name  <span>*</span></label>
-                  <span class="error-message"></span>
+                    <!-- show error message while input lose focus and is empty -->
+                    <div *ngIf="last_name?.invalid && (last_name?.dirty || last_name?.touched)" >
+                      <div *ngIf="city?.hasError('required')">
+                        <span class="error-message">Last name is required.</span>
+                      </div>
+                    </div>
               </div>
 
               <!--email-->
               <div class="user-box">
-                  <input    id="email" maxlength="80" name="email" size="20" type="text" required/>
+                  <input   formControlName="email"   id="email" maxlength="80" name="email" size="20" type="text" required/>
                   <label for="email" > <i class="fa-solid fa-envelope"></i>  Email    <span>*</span></label>
-                  <span class="error-message"></span>
+                     <!-- show error message while input lose focus and is empty -->
+                     <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"  >
+                      <div *ngIf="email?.errors?.['required']">
+                        <span class="error-message">Email is required.</span>
+                         </div>
+                    </div>
               </div>
 
 
               <!--company-->
               <div class="user-box">
-                  <input    id="company" maxlength="40" name="company" size="20" type="text" required/>
+                  <input  formControlName="company"  id="company" maxlength="40" name="company" size="20" type="text" required/>
                   <label for="company" > <i class="fa-solid fa-building"></i> Company <span>*</span></label>
-                  <span class="error-message"></span>
+                    <!-- show error message while input lose focus and is empty -->
+                    <div *ngIf="company?.invalid && (company?.dirty || company?.touched)" >
+                      <div *ngIf="company?.errors?.['required']">
+                         <span class="error-message">Company is required.</span>
+                      </div>
+                    </div>
               </div>
 
               <!--city-->
               <div class="user-box">
-                  <input   id="city" maxlength="40" name="city" size="20" type="text" required/>
+                  <input  formControlName="city" id="city" maxlength="40" name="city" size="20" type="text" required/>
                   <label for="city" ><i class="fa-solid fa-thumbtack"></i> City   <span>*</span></label>
-                  <span class="error-message"></span>
+                  <!-- show error message while input lose focus and is empty -->
+                  <div *ngIf="city?.invalid && (city?.dirty || city?.touched)" >
+                    <div *ngIf="city?.hasError('required')">
+                        <span class="error-message">City is required.</span>
+                    </div>
+                  </div>
               </div>
 
               <!-- state / province-->
               <div class="user-box">
-                  <input    id="state" maxlength="20" name="state" size="20" type="text" required/>
+                  <input  formControlName="state"   id="state" maxlength="20" name="state" size="20" type="text" required/>
                   <label for="state" > <i class="fa-solid fa-location-dot"></i> State/Province    <span>*</span></label>
-                  <span class="error-message"></span>
+                  <div *ngIf="state?.invalid && (state?.dirty || state?.touched)" >
+                    <div *ngIf="state?.errors?.['required']">
+                      <span class="error-message">State / Province is required.</span>
+                    </div>
+                  </div>
               </div>
 
               <!-- phone -->
               <div class="user-box">
 
-                  <input oninput=""   id="phone" maxlength="40" name="phone" size="20" type="text" required />
+                  <input formControlName="phone"   id="phone" maxlength="40" name="phone" size="20" type="text" required />
                   <label for="phone" > <i class="fa-solid fa-phone"></i> Phone    <span>*</span></label>
-                  <span class="error-message " id="error-message" > </span>
+                  <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" >
+                    <div *ngIf="phone?.errors?.['required']">
+                      <span class="error-message">Phone is required.</span>
+                    </div>
+                  </div>
               </div>
 
               <!-- NINEA -->
               <div class="user-box">
-                  <input   id="00Nd20000011DST" maxlength="255" name="00Nd20000011DST" size="20" type="text" required/>
+                  <input  formControlName="ninea"  id="00Nd20000011DST" maxlength="255" name="00Nd20000011DST" size="20" type="text" required/>
                   <label for="00Nd20000011DST"  > <i class="fa-solid fa-certificate"></i> NINEA  <span>*</span></label>
-                  <span class="error-message " id="error-message" > </span>
+                  <div *ngIf="ninea?.invalid && (ninea?.dirty || ninea?.touched)"  >
+                      <div *ngIf=" ninea?.hasError('required')">
+                      <span class="error-message">Ninea is required</span>
+                    </div>
+                  </div>
               </div>
 
                <!-- RAISON SOCIAL -->
               <div class="user-box">
 
-                  <input    id="00Nd20000011Dib" maxlength="255" name="00Nd20000011Dib" size="20" type="text" required/>
+                  <input formControlName="raison_social"   id="00Nd20000011Dib" maxlength="255" name="00Nd20000011Dib" size="20" type="text" required/>
                   <label for="00Nd20000011Dib" > <i class="fa-solid fa-place-of-worship"></i> Business Name  <span>*</span></label>
-                  <span class="error-message " id="error-message" > </span>
+                  <div class="mb-4" *ngIf="raison_social?.invalid && (raison_social?.dirty || raison_social?.touched)"  >
+                    <div *ngIf=" raison_social?.hasError('required')">
+                    <span class="error-message ">  Company Business is required</span>
+                  </div>
+                </div>
               </div>
 
               <!-- submit button -->
