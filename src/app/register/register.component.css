@@ -4,7 +4,7 @@
 */
 
 .login-box {
-  position: fixed;
+  position: absolute;
   margin-top: 12%;
   top: 70%;
   left: 50%;
