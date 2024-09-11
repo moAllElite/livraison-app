@@ -18,7 +18,9 @@
                 <form class="row g-3" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Dd2000001MlR9" method="POST">
 
                     <input type=hidden name="orgid" value="00Dd2000001MlR9">
-                    <input type=hidden name="retURL" value="https://www.google.com/">
+                    <!-- redirect to success view -->
+                    <input type=hidden name="retURL" value="https://livraison-app-plum.vercel.app/success">
+
 
                     <!--  ----------------------------------------------------------------------  -->
                     <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -62,8 +64,9 @@
                         <label for="company" class="form-label">Company</label>
                         <input  class="form-control"   id="company" maxlength="80" name="company" size="20" type="text" />
                     </div>
-
+                    <!-- status & product -->
                     <div class="row mb-3">
+                      <!-- status -->
                         <div class="col">
                             <label for="status"  class="label-select">Status</label>
                             <select  id="status"  class="form-select" name="status"   >
@@ -74,19 +77,14 @@
                                 <option value="Closed">Closed</option>
                             </select>
                         </div>
+                        <!-- product -->
                         <div class="col">
                             <label for="00Nd2000000Z2ru" class="form-label">Product</label>
                             <select  class="form-select"  id="00Nd2000000Z2ru" name="00Nd2000000Z2ru" title="Product">
                                 <option value="">--None--</option>
-                                <option value="GC1040">GC1040</option>
-                                <option value="GC1060">GC1060</option>
-                                <option value="GC3020">GC3020</option>
-                                <option value="GC3040">GC3040</option>
-                                <option value="GC3060">GC3060</option>
-                                <option value="GC5020">GC5020</option>
-                                <option value="GC5040">GC5040</option>
-                                <option value="GC5060">GC5060</option>
-                                <option value="GC1020">GC1020</option>
+                                <option value="Container 20' DRY">Container 20' DRY</option>
+                                <option value="Container 40' DRY">Container 40' DRY</option>
+
                             </select>
 
                         </div>

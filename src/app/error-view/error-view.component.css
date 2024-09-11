@@ -1,0 +1,77 @@
+.container {
+  margin: auto;
+  max-width: 540px;
+  min-width: 200px;
+}
+.is-centered{
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+}
+.text-centered{
+  text-align: center;
+}
+.card{
+  min-width: 500px;
+  height: 400px;
+  box-shadow:0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.title{
+  color: #666;
+  font-weight: normal;
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+  margin-top: 1px;
+  line-height:50px;
+}
+.btn-send,button{
+  text-decoration: none;
+  margin-bottom: 3,5em;
+  background-color: #f3f3f3;
+  border-radius: 30px;
+  color: #001489;
+  text-transform: capitalize;
+
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.5);
+  padding: 10px 20px 10px 10px;
+  width: 40%;
+  box-sizing: border-box;
+  transition: 1s background-color ease ;
+  -o-transition: 1s background-color ease ;
+  -webkit-transition: 1s background-color ease ;
+  -moz-transition: 1s background-color ease ;
+  -ms-transition: 1s background-color ease ;
+  transition-delay: 20ms;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.warning:hover{
+  animation: fade-out 2.7s ease-out forwards;
+  position: relative;
+  -webkit-animation: fade-out 2.7s ease-out forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+.btn-send:hover{
+  background-color: #001489;
+  color: #fff;
+  border: 1px solid #001489;
+
+}

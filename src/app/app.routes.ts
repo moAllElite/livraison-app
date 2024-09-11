@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import {OrderComponent} from './order/order.component';
 import { SuccessViewComponent } from './success-view/success-view.component';
+import { ErrorViewComponent } from './error-view/error-view.component';
 
 
 export const routes: Routes = [
@@ -20,5 +21,8 @@ export const routes: Routes = [
   },
   {
     path:'success',component:SuccessViewComponent
-  }
+  },
+  {
+    path:'**',component:ErrorViewComponent
+  },
 ];
