@@ -15,23 +15,22 @@
         <div class=" card mb-5">
            <div class="card-body">
                 <h1 class="card-title">Order form</h1>
-                <form class="row g-3" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Dd2000001MlR9" method="POST">
+                <form class="row g-3"action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Dd2000001MlR9" method="POST">
 
-                    <input type=hidden name="orgid" value="00Dd2000001MlR9">
-                    <!-- redirect to success view -->
-                    <input type=hidden name="retURL" value="https://livraison-app-plum.vercel.app/success">
+                  <input type=hidden name="orgid" value="00Dd2000001MlR9">
+                  <input type=hidden name="retURL" value="https://livraison-app-plum.vercel.app/success">
+
+                  <!--  ----------------------------------------------------------------------  -->
+                  <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                  <!--  these lines if you wish to test in debug mode.                          -->
+                  <!--  <input type="hidden" name="debug" value=1>                              -->
+                  <!--  <input type="hidden" name="debugEmail"                                  -->
+                  <!--  value="ahmedsidatendir97@gmail.com">                                    -->
+                  <!--  ----------------------------------------------------------------------  -->
 
 
-                    <!--  ----------------------------------------------------------------------  -->
-                    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-                    <!--  these lines if you wish to test in debug mode.                          -->
-                    <!--  <input type="hidden" name="debug" value=1>                              -->
-                    <!--  <input type="hidden" name="debugEmail"                                  -->
-                    <!--  value="ahmedsidatendir97@gmail.com">                                    -->
-                    <!--  ----------------------------------------------------------------------  -->
-                    <!-- contact name field  -->
                     <div class="mb-3 col-md-6">
-                        <label for="name" class="form-label">Contact Name</label>
+                        <label for="name" class="form-label">Full Name</label>
                         <input class="form-control"  id="name" maxlength="80" name="name" size="20" type="text" />
                     </div>
 
@@ -46,36 +45,20 @@
                         <label for="phone" class="form-label">Phone</label>
                         <input  id="phone" class="form-control" maxlength="40" name="phone" size="20" type="text" />
                     </div>
-
-                    <!-- subject field -->
-                    <div class="mb-3 col-md-6">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input  class="form-control"   id="subject" maxlength="80" name="subject" size="20" type="text" />
-                    </div>
-
-                    <!-- description field -->
-                    <div class="mb-3 col-md-6">
-                        <label for="description" class="form-label">Description</label>
-                        <textarea name="description" class="form-control"  placeholder="Description"></textarea>
-                    </div>
-
-                    <!-- company field -->
+                   <!-- company field -->
                     <div class="mb-3 col-md-6">
                         <label for="company" class="form-label">Company</label>
                         <input  class="form-control"   id="company" maxlength="80" name="company" size="20" type="text" />
                     </div>
-                    <!-- status & product -->
+                    <!-- destination & product -->
                     <div class="row mb-3">
-                      <!-- status -->
+                      <!-- destination -->
                         <div class="col">
-                            <label for="status"  class="label-select">Status</label>
-                            <select  id="status"  class="form-select" name="status"   >
-                                <option value="">--None--</option>
-                                <option value="New">New</option>
-                                <option value="Working">Working</option>
-                                <option value="Escalated">Escalated</option>
-                                <option value="Closed">Closed</option>
-                            </select>
+                          <!-- destination field -->
+
+                              <label for="destination" class="form-label">Destination</label>
+                              <input class="form-control" id="destination" maxlength="255" name="00Nd20000019qYH" size="20" type="text" /><br>
+
                         </div>
                         <!-- product -->
                         <div class="col">
@@ -84,12 +67,18 @@
                                 <option value="">--None--</option>
                                 <option value="Container 20' DRY">Container 20' DRY</option>
                                 <option value="Container 40' DRY">Container 40' DRY</option>
-
                             </select>
-
-                        </div>
-
+                          </div>
+                            <!-- status field-->
+                            <div class=" ">
+                              <label for="status" >Status</label>
+                              <select class="form-select"  name="status" id="status" name="status">
+                                <option value="New">New</option>
+                              </select>
+                          </div>
+                          <!-- status field-->
                     </div>
+
                     <div class="col-md-6  offset-md-3 is-center">
                         <button type="submit" name="submit" class="btn btn-success">
                            Send <i class="bi bi-send"></i>
