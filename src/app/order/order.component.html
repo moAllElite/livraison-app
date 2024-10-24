@@ -14,7 +14,7 @@
     <div class="container">
         <div class=" card mb-5">
            <div class="card-body">
-                <h1 class="card-title">Order form</h1>
+                <h1 class="card-title">Case form</h1>
                 <form class="row g-3"action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Dd2000001MlR9" method="POST">
 
                   <input type=hidden name="orgid" value="00Dd2000001MlR9">
@@ -60,21 +60,45 @@
                               <input class="form-control" id="destination" maxlength="255" name="00Nd20000019qYH" size="20" type="text" /><br>
 
                         </div>
-                        <!-- product -->
+                        <!-- Subject -->
                         <div class="col">
-                            <label for="00Nd2000000Z2ru" class="form-label">Product</label>
-                            <select  class="form-select"  id="00Nd2000000Z2ru" name="00Nd2000000Z2ru" title="Product">
-                                <option value="">--None--</option>
-                                <option value="Container 20' DRY">Container 20' DRY</option>
-                                <option value="Container 40' DRY">Container 40' DRY</option>
-                            </select>
+
+                            <label for="subject" class="form-label">Subject</label>
+                            <input class="form-control" id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
                           </div>
-                            <!-- status field-->
-                            <div class=" ">
-                              <label for="status" >Status</label>
-                              <select class="form-select"  name="status" id="status" name="status">
-                                <option value="New">New</option>
-                              </select>
+
+                            <div class=" row mb-3">
+
+                                <!-- product -->
+                                <div class="col">
+                                  <label for="00Nd2000000Z2ru" class="form-label">Product</label>
+                                  <select  class="form-select"  id="00Nd2000000Z2ru" name="00Nd2000000Z2ru" title="Product">
+                                      <option value="">--None--</option>
+                                      <option value="Dakar 0005">Dakar 0005</option>
+                                      <option value="Dakar 0510">Dakar 0510</option>
+
+                                      <option value="Thiès 0005">Thiès 0005</option>
+                                      <option value="Thiès 0510">Thiès 0510</option>
+
+                                      <option value="Louga 0005">Louga 0005</option>
+                                      <option value="Louga 0510">Louga 0510</option>
+
+                                      <option value="Diourbel 0005">Diourbel 0005</option>
+                                      <option value="Diourbel 0510">Diourbel 0510</option>
+
+
+                                      <option value="Fatick 0005">Fatick 0005</option>
+                                      <option value="Fatick 0510">Fatick 0510</option>
+                                  </select>
+                                </div>
+
+                                 <!-- status field-->
+                                <div class="col">
+                                  <label for="status" class="form-label" >Status</label>
+                                  <select class="form-select"  name="status" id="status" name="status">
+                                    <option value="New">New</option>
+                                  </select>
+                            </div>
                           </div>
                           <!-- status field-->
                     </div>
